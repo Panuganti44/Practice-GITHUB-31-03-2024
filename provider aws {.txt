@@ -11,6 +11,6 @@ resource "aws_instance" "example" {
   security_groups = ["your_security_group_id"]
 
   tags = {
-    Name = "ExampleInstance"
+    Name = "ExInstance"
   }
 }
