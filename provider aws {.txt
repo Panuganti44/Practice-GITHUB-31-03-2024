@@ -1,0 +1,16 @@
+provider "aws" {
+  region = "me_aws_region"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-12345678" // Replace with your desired AMI ID
+  instance_type = "t2.micro"      // Replace with your desired instance type
+
+  // Replace these with your desired key pair name and security group IDs
+  key_name      = "your_key_pair_name"
+  security_groups = ["your_security_group_id"]
+
+  tags = {
+    Name = "ExampleInstance"
+  }
+}
